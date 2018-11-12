@@ -14,5 +14,5 @@
         "128": "icon_128.png"
     },
     "sandbox": ["app.html"],
-    "permissions": ["webview", "system.display", "storage"]
+    "permissions": ["webview", "system.display", "storage", "videoCapture", "audioCapture", "audio"]
 }

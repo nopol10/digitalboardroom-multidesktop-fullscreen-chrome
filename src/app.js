@@ -169,7 +169,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			var tab = findTab(webview.id);
             closeTab(tab);
 		});
-        
+
+        webview.addEventListener('permissionrequest', function(event) {
+            console.log('Permission Requested:', event);
+            if (event.permission === 'media') {
+                event.request.allow();
+            }
+        });
+
         webview.setZoomMode("disabled"); // Do not allow zooming.
 
         tabButton.innerHTML = "" + newTabId;
